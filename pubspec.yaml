@@ -14,7 +14,7 @@ dependencies:
   intl: ^0.19.0
   url_launcher: ^6.2.5
   cached_network_image: ^3.3.1
-  crash_heal: ^0.1.0
+  crash_heal: ^0.1.1
 
 dev_dependencies:
   flutter_test:
