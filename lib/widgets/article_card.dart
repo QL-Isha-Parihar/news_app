@@ -7,8 +7,14 @@ import '../models/article.dart';
 class ArticleCard extends StatelessWidget {
   final Article article;
   final VoidCallback onTap;
+  final bool isSecondTab;
 
-  const ArticleCard({super.key, required this.article, required this.onTap});
+  const ArticleCard({
+    super.key,
+    required this.article,
+    required this.onTap,
+    this.isSecondTab = false,
+  });
 
   String _timeAgo(DateTime? date) {
     if (date == null) return '';
@@ -62,7 +68,7 @@ class ArticleCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      article.title.substring(0, 1000),
+                      isSecondTab ? article.title.substring(0, 1000) : article.title,
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),

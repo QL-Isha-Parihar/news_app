@@ -1,4 +1,3 @@
-import 'package:crash_heal/crash_heal.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/home_screen.dart';
@@ -6,7 +5,7 @@ import 'screens/home_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Override the default error widget (red screen)
-  ErrorWidget.builder = (FlutterErrorDetails details) {
+  /* ErrorWidget.builder = (FlutterErrorDetails details) {
     return Material(
       child: Container(
         padding: const EdgeInsets.all(20),
@@ -26,19 +25,19 @@ void main() async {
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 14, color: Colors.black54),
             ),
-            const SizedBox(height: 20),
+            */ /*  const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // In a real app, you might want to report this or restart
               },
               child: const Text('Report Error'),
-            )
+            )*/ /*
           ],
         ),
       ),
     );
-  };
-  try {
+  };*/
+/*  try {
     await CrashHeal.init(
       apiKey: '6a760642757bfee2f4bbdc34.tcpksc9ybUWua9WILWL_XeDSRSF0j_1eLUFBy5IXpmY',
       appName: 'news_app_flutter',
@@ -48,7 +47,7 @@ void main() async {
     );
   } catch (e) {
     debugPrint('Failed to initialize CrashHeal in main(): $e');
-  }
+  }*/
   runApp(const NewsApp());
 }
 

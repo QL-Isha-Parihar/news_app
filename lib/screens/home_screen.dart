@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/article.dart';
 import '../services/news_service.dart';
 import '../widgets/article_card.dart';
@@ -11,8 +12,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>
-    with SingleTickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
   final NewsService _newsService = NewsService();
   late TabController _tabController;
 
@@ -156,9 +156,7 @@ class _HomeScreenState extends State<HomeScreen>
               ),
               const SizedBox(height: 16),
               ElevatedButton(
-                onPressed: _isSearching
-                    ? () => _search(_searchController.text)
-                    : _loadNews,
+                onPressed: _isSearching ? () => _search(_searchController.text) : _loadNews,
                 child: const Text('Retry'),
               ),
             ],
@@ -181,6 +179,7 @@ class _HomeScreenState extends State<HomeScreen>
           final article = _articles[index];
           return ArticleCard(
             article: article,
+            isSecondTab: _tabController.index == 1, // Pass true only for the second tab
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
