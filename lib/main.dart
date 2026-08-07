@@ -1,3 +1,4 @@
+import 'package:crash_heal/crash_heal.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/home_screen.dart';
@@ -37,7 +38,7 @@ void main() async {
       ),
     );
   };*/
-/*  try {
+  try {
     await CrashHeal.init(
       apiKey: '6a760642757bfee2f4bbdc34.tcpksc9ybUWua9WILWL_XeDSRSF0j_1eLUFBy5IXpmY',
       appName: 'news_app_flutter',
@@ -47,7 +48,7 @@ void main() async {
     );
   } catch (e) {
     debugPrint('Failed to initialize CrashHeal in main(): $e');
-  }*/
+  }
   runApp(const NewsApp());
 }
 
