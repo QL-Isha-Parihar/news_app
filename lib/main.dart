@@ -42,8 +42,6 @@ void main() async {
     await CrashHeal.init(
       apiKey: '6a760642757bfee2f4bbdc34.tcpksc9ybUWua9WILWL_XeDSRSF0j_1eLUFBy5IXpmY',
       appName: 'news_app_flutter',
-      branchName: "main",
-      repoName: "QL-Isha-Parihar/news_app",
 
       syncInterval: const Duration(hours: 1), // Rapid sync interval for interactive testing
       enableLogging: true,
