@@ -62,8 +62,7 @@ class ArticleCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      article.title
-                          .substring(0, 1000), // Bug: Will throw RangeError for most titles
+                      article.title,
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
